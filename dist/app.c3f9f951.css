@@ -311,45 +311,6 @@ body {
   padding: 150px 0;
 }
 
-.contact__heading {
-  position: relative;
-  margin-bottom: 8rem;
-}
-
-.contact__heading::after {
-  content: "CONTACT";
-  position: absolute;
-  top: -4.4rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 150px;
-  font-weight: bold;
-  opacity: 0.05;
-}
-
-.contact__form {
-  max-width: 800px;
-  margin: auto;
-}
-
-.contact__form input,
-.contact__form textarea {
-  background-color: transparent;
-  color: var(--color-secondary);
-  border: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  resize: none;
-  margin-bottom: 2rem;
-  padding: 1rem 0.5rem;
-  transition: border-color 0.5s ease-in-out;
-}
-
-.contact__form input:focus,
-.contact__form textarea:focus {
-  outline: none;
-  border-color: rgba(255, 255, 255);
-}
-
 /* Footer  */
 
 footer .copyright {
