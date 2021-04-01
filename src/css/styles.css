@@ -1,0 +1,424 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+*:root {
+  --font-body: "Open Sans", sans-serif;
+  --heading-first: 50px;
+  --heading-second: 40px;
+  --heading-second: 25px;
+  --color-primary: #000;
+  --color-secondary: #fff;
+}
+
+h1 {
+  font-size: var(--heading-first);
+}
+
+h2 {
+  font-size: var(--heading-second);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--heading-third);
+  margin: 0;
+}
+
+a:focus {
+  outline: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+button:focus,
+button:active {
+  outline: none !important;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  overflow-x: hidden;
+}
+
+.navbar {
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.navbar.active {
+  background-color: crimson;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    background-color: crimson;
+  }
+}
+
+/* Hero */
+
+.hero {
+  height: 100vh;
+}
+
+.hero .subhead {
+  position: relative;
+}
+
+.hero .subhead::after {
+  content: "";
+  width: 4rem;
+  height: 3px;
+  background-color: var(--color-secondary);
+  position: absolute;
+  top: 50%;
+  margin: 0 0.5rem;
+}
+
+.hero .heading {
+  font-size: var(--heading-first);
+  font-weight: bold;
+}
+
+.hero .desc {
+  width: 90%;
+}
+
+.hero__img {
+  width: 200%;
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .hero .subhead::after {
+    display: none;
+  }
+
+  .hero__img {
+    width: 100%;
+  }
+}
+
+/* About */
+
+.about {
+  padding: 150px 0;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.about__img__box {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.about__content .heading {
+  font-size: var(--heading-second);
+  font-weight: 600;
+  position: relative;
+}
+
+.about .heading::after {
+  content: "";
+  width: 4rem;
+  height: 3px;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 50%;
+  margin: 0 0.5rem;
+}
+
+.tech__list ul {
+  margin-left: 1rem;
+}
+
+.tech__list li {
+  margin-bottom: 0.3rem;
+}
+
+.about .desc p {
+  line-height: 1.8;
+}
+
+@media screen and (max-width: 992px) {
+  .about__content {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about {
+    padding: 100px 0;
+  }
+  .about__img__box {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Services */
+
+.services {
+  padding: 150px 0;
+}
+
+.services__heading {
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.services__heading::after {
+  content: "SERVICES";
+  position: absolute;
+  top: -4.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150px;
+  font-weight: bold;
+  opacity: 0.05;
+}
+
+.services__box {
+  border: 2px solid #efefef;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.services__box:hover {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 100px 0;
+  }
+
+  .services__heading {
+    margin-bottom: 4rem;
+  }
+
+  .services__heading::after {
+    top: -1.6rem;
+    transform: translateX(-50%);
+    font-size: 70px;
+  }
+  .services__box {
+    padding: 1.5rem 0.5rem;
+  }
+}
+/* Portfolio */
+
+.portfolio {
+  padding: 150px 0;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.portfolio__heading {
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.portfolio__heading::after {
+  content: "PORTFOLIO";
+  position: absolute;
+  top: -4.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150px;
+  font-weight: bold;
+  opacity: 0.05;
+  color: var(--color-primary);
+}
+
+.portfolio__box {
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.portfolio__box:hover::after {
+  opacity: 1;
+}
+
+.portfolio__box::after {
+  background-color: rgba(0, 0, 0, 0.8);
+  content: "";
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+
+.portfolio__hover__box {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 1.4rem;
+  left: 50%;
+  opacity: 0;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+  z-index: 3;
+}
+
+.portfolio__hover__box a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+.portfolio__box:hover .portfolio__hover__box {
+  opacity: 01;
+}
+
+/* Contact */
+
+.contact {
+  padding: 150px 0;
+}
+
+.contact__heading {
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.contact__heading::after {
+  content: "CONTACT";
+  position: absolute;
+  top: -4.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150px;
+  font-weight: bold;
+  opacity: 0.05;
+}
+
+.contact__form {
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact__form input,
+.contact__form textarea {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  resize: none;
+  margin-bottom: 2rem;
+  padding: 1rem 0.5rem;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255);
+}
+
+/* Footer  */
+
+footer .copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .services,
+  .portfolio,
+  .contact {
+    padding: 100px 0;
+  }
+
+  .services__heading,
+  .portfolio__heading,
+  .contact__heading {
+    margin-bottom: 4rem;
+  }
+
+  .services__heading::after,
+  .portfolio__heading::after,
+  .contact__heading::after {
+    top: -1.6rem;
+    transform: translateX(-50%);
+    font-size: 70px;
+  }
+  .services__box {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+/* Popups */
+
+.social {
+  position: fixed;
+  bottom: 10%;
+  left: 3rem;
+}
+
+.social__box {
+  position: relative;
+}
+
+.social__box::after {
+  content: "";
+  position: absolute;
+  left: 0.6rem;
+  bottom: -5.5rem;
+  width: 2px;
+  height: 80px;
+  background-color: crimson;
+}
+
+.social__box a {
+  text-decoration: none;
+  color: crimson;
+}
+
+.social__box i {
+  font-size: 1.5rem;
+}
+
+.social__box a:not(:last-child) {
+  margin-bottom: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .social {
+    display: none;
+  }
+}
